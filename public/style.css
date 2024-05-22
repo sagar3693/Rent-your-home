@@ -1,0 +1,114 @@
+body{
+    font-family: 'Poppins', sans-serif !important;
+
+    /* to set footer ok */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+    /* to set footer ok */
+.container{
+    flex: 1;
+}
+
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link{
+    color:#222222 !important;
+}
+
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links:hover{
+    text-decoration: underline;
+}
+
+.f-info{
+    display: flex;
+    height: 8rem;
+    background-color: #ebebeb;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    text-align: center;
+}
+
+.f-info-links{
+    width: 100%;
+}
+
+.f-info-socials{
+    width: 100%;
+    font-size:1.2rem;
+}
+
+.f-info-socials i {
+    margin-right: 1rem;
+    font-size:1.2rem;
+}
+
+/* Cards : */
+
+.card{
+    /* width: 100%; */
+    border: none !important;
+    margin-bottom: 2rem;
+    /* margin-right: 1rem; */
+    /* display: flex; */
+}
+
+.r-card{
+    border:1px solid rgba(0,0,0,.3) !important;
+}
+
+.card-img-top{
+   border-radius: 1rem !important;
+   width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body{
+    padding: 0 !important;
+}
+
+.listing-link{
+    text-decoration: none;
+}
+
+/* card effect */
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    opacity: .2;
+    background-color: white;
+}
+
+.show-img{
+    height: 30vh !important;
+    /* width: 95vw !i; */
+}
+
+.btns{
+    display: flex;
+}
+
+/* map */
+#map { 
+    height: 100px; 
+    width: 100px;
+    border: 2px solid red;
+}

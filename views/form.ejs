@@ -1,0 +1,86 @@
+<% layout("./layouts/boilerplate2") %>
+<div class="row">
+    <div class="col-8 offset-2">
+        <br>
+        <h3>Create a new list</h3>
+    <form action="/listings" method="post" class="needs-validation" novalidate enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" name="listobj[title]" placeholder="Enter title" class="form-control" required>
+
+            <!-- Showing success and failure message -->
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                Please Enter A Title.
+            </div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <input type="text" name="listobj[description]" placeholder="Enter description" class="form-control" required>
+
+            <!-- Showing success and failure message -->
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                Please Enter a Description.
+            </div>
+            
+        </div>
+
+
+        <div class="mb-3">
+            <label for="image" class="form-label">Image</label>
+            <!-- input type changed to file -->
+            <input type="file" name="listobj[image]" placeholder="Enter image url" class="form-control" required>
+            <!-- now you can make your image required -->
+        </div>
+
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" name="listobj[price]" placeholder="Enter price" class="form-control" required>
+
+            <!-- Showing success and failure message -->
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                Price should be valid.
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <input type="text" name="listobj[country]" placeholder="Enter country" class="form-control" required>
+
+            <!-- Showing success and failure message -->
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                Country name should be valid.
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" name="listobj[location]" placeholder="Enter location" class="form-control" required>
+
+            <!-- Showing success and failure message -->
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                Location name should be valid.
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-danger">add</button>
+        <br><br>
+    </form>
+    </div>
+</div>

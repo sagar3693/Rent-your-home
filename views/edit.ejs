@@ -1,0 +1,88 @@
+<!-- Editing form like sag6_fomr5.ejs for validation -->
+<% layout("./layouts/boilerplate2") %>
+<div class="row">
+    <div class="col-8 offset-2">
+        <br>
+        <h3>Edit Your listings</h3>
+    <form action="/listings/<%= listData._id  %>?_method=put" method="post" class="needs-validation" novalidate enctype="multipart/form-data">
+        <!-- enctype added -->
+        
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" name="listobj[title]" value="<%= listData.title  %>" class="form-control" required>
+
+            <!-- Showing success and failure message -->
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                Please Enter A Title.
+            </div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <input type="text" name="listobj[description]" value="<%= listData.description  %>" class="form-control" required>
+
+            <!-- Showing success and failure message -->
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                Please Enter a Description.
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload new image</label>
+            <input type="file" name="listobj[image]" class="form-control" placeholder="">
+            <!-- changed type text to file -->
+            <!-- new image uploading is not compulsory for us so we not used 'required' here -->
+        </div>
+
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" name="listobj[price]" value="<%= listData.price  %>"class="form-control" required>
+
+            <!-- Showing success and failure message -->
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                Price should be valid.
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <input type="text" name="listobj[country]" value="<%= listData.country  %>" class="form-control" required>
+
+            <!-- Showing success and failure message -->
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                Country name should be valid.
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" name="listobj[location]" value="<%= listData.location  %>" class="form-control" required>
+
+            <!-- Showing success and failure message -->
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                Location name should be valid.
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-danger">Edit</button>
+        <br><br>
+    </form>
+    </div>
+</div>

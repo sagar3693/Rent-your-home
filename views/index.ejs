@@ -1,0 +1,33 @@
+<!-- code for ejs-mate -->
+
+<% layout("./layouts/boilerplate2") %>
+
+
+<body>
+    <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-1 mt-3">
+        <% for(let listing of alllistings) { %>
+            <a href="/listings/<%= listing._id  %>" class="listing-link">
+                <div class="card cols">
+                    <img src="<%= listing.image.url  %>" class="card-img-top" alt="listing-image" style="height:20rem">
+                    <!-- <div class="card-img-overlay">
+                        dj
+                    </div> -->
+                    <div class="card-body">
+                      <p class="card-text"><b><%= listing.title  %></b>  <br>
+                        <span>&#8377; </span><%= listing.price %> / Night
+                    </p>
+                    </div>
+                </div>
+                
+                <% } %>
+            </a>
+    </div>
+
+
+    <!-- <ul>
+        <% for(let Listing of alllistings) { %>
+            <li><a href="/listings/<%= Listing._id  %>"><%= Listing.title  %></a></li>
+        <% } %>
+
+    </ul> -->
+</body>

@@ -1,0 +1,21 @@
+<!-- If you have no success message then also it will show this bootstrap design on the screen : -->
+<!-- <div class="alert alert-success" role="alert">
+    <%# success %>
+</div> -->
+
+<!-- if you have success message then only it will show on the screen -->
+<% if(success && success.length){ %>
+    <!-- this conditions says thay you have both success and value of success -->
+    <div class="alert alert-success alert-dismissible fade show offset-3 col-6 mt-2" role="alert">
+        <%= success %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>
+
+
+<% if(error && error.length){ %>
+    <div class="alert alert-danger alert-dismissible fade show offset-3 col-6 mt-2" role="alert">
+        <%= error %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>
