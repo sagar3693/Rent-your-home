@@ -1,6 +1,6 @@
 # Rent Your home
-### A web application for renting properties.[^1]
+### A web application for renting properties.
 ## visit to: [Rent your home](https://sagarjd.onrender.com/listings)
-[^2]
+
 
 ![alt project](./public/wanderlust.png)
